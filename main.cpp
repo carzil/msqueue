@@ -1,5 +1,7 @@
 #include "gtest/gtest.h"
 
+#include <atomic>
+#include <mutex>
 #include <queue>
 #include <random>
 #include <thread>
