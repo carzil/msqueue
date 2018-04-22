@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for solution in solution_lock*.cpp
+for solution in solution_*.cpp
 do
     echo "=== COMPILING SOLUTION $solution"
     name=${solution/solution_/}
