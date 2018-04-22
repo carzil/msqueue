@@ -12,12 +12,13 @@ class IQueue
 public:
     virtual void Push(uint64_t value) = 0;
     virtual std::pair<bool, uint64_t> Pop() = 0;
+    virtual ~IQueue() {};
 };
 
 // For simplicity, you may assume that threads are explicitly enumerated
 // with indexes ranging from 0 to N.
 int GetCurrentThreadIndex();
-int GetMaxThreadCount();
+constexpr int GetMaxThreadCount();
 void SetCurrentThreadIndex(int thread_index);
 
 // Thread index tracking code.
@@ -29,7 +30,7 @@ int GetCurrentThreadIndex()
     return this_thread_index_;
 }
 
-int GetMaxThreadCount()
+constexpr int GetMaxThreadCount()
 {
     return max_thread_count_;
 }
